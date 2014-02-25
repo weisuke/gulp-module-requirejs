@@ -8,9 +8,9 @@
   },
   "dependencies":{
     "gulp-util": "~2.2.5",
-    "requirejs": "2.1.11",
-    "through2": "^0.4.1",
-    "diff": "^1.0.8"	
+    "requirejs": "~2.1.11",
+    "through2": "~0.4.1",
+    "diff": "~1.0.8"
   },
   "repository": {
     "type": "git",
