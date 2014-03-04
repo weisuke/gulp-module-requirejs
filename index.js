@@ -10,9 +10,9 @@ var through = require('through2'),
 const PLUGIN_NAME = 'gulp-module-requirejs';
 
 // Plugin level function (dealing with files)
-function gulpPrefixer(dir) {
+function gulpModulesRequirejs(opts) {
 
-    var currentPath = path.resolve(dir), config, baseUrl, moduleFile, moduleName, stream, out;
+    var currentPath = path.resolve(opts.dir), config, baseUrl, moduleFile, moduleName, stream, out;
 
     // Creating a stream through which each file will pass
         stream = through.obj(function (file, enc, callback) {
@@ -29,7 +29,7 @@ function gulpPrefixer(dir) {
             moduleName = moduleFile.replace(/\.[^/.]+$/, "");
 
 
-            requirejs.optimize({
+            requirejs.optimize(opts.r || {
                 baseUrl: baseUrl,
                 name: moduleName,
                 out: function(output){
@@ -56,4 +56,4 @@ function gulpPrefixer(dir) {
 };
 
 // Exporting the plugin main function
-module.exports = gulpPrefixer;
+module.exports = gulpModulesRequirejs;
