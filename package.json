@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/weisuke/gulp-module-requirejs/issues"
   },
-  "homepage": "https://github.com/weisuke/gulp-module-requirejs"
+  "homepage": "https://github.com/weisuke/gulp-module-requirejs",
+  "keywords": [
+    "gulpplugin"  
+  ]
 }
