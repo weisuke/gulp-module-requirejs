@@ -40,7 +40,7 @@ function gulpModulesRequirejs(opts) {
                 },
                 optimize : 'none'
             }, function (buildResponse) {
-                console.log('module compiled: ' + currentPath + '/build/modules/' + moduleFile);
+                console.log('module compiled: ' + currentPath + '/build/' + moduleFile);
                 return callback();
             });
         }
